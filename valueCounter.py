@@ -5,7 +5,7 @@ class valueCounter(PyGine.GameObject) :
         self.parent = cell
         self.transform.position = PyGine.Vector3(20,20,0)
         self.transform.scale = PyGine.Vector3(1,2,0)
-        self.txt = self.addComponent(PyGine.TextComponent(self,str(cell.value)))
+        self.txt = self.addComponent(PyGine.TextComponent(self,str(cell.value),(200,200,200),20))
 
     def update(self, dt):
         self.txt.setText(str(self.parent.value))

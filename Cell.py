@@ -27,7 +27,7 @@ class Cell(PyGine.GameObject) :
 
         if self.value == "-1" :
             PyGine.Game.game.getCurrentScene().getGameObject("GM").initGame()
-            PyGine.Game.game.setScene(3)
+            PyGine.Game.game.setScene(2)
             return
 
         for px in [x-1 , x , x+1] :
@@ -55,6 +55,11 @@ class Cell(PyGine.GameObject) :
 
 
     def update(self,dt) :
+
+        self.dr.color = (100,100,100)
+        if self.transform.isPointInside(PyGine.MouseListener.getPos()) :
+            self.dr.color = (120,120,150)
+
         if PyGine.MouseListener.getPressed(0) and self.transform.isPointInside(PyGine.MouseListener.getPos()) and not self.revealed :
             self.verify()
             self.reveal()

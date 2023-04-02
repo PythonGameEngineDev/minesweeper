@@ -6,7 +6,7 @@ class clock(PyGine.GameObject) :
         self.parent = parent
         self.transform.position = PyGine.Vector3(0,0,0)
         self.transform.scale = PyGine.Vector3(100,100,0)
-        self.txt = self.addComponent(PyGine.TextComponent(self,"0"))
+        self.txt = self.addComponent(PyGine.TextComponent(self,"0",(200,200,200),20))
         self.fixed = True
         self.time = 0
         self.txt.setText(str(self.time//60))

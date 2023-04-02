@@ -23,4 +23,4 @@ class gridManager(PyGine.GameObject) :
 
 def getRandomState() :
     choices = ["-1", "0"]
-    return random.choices(choices, weights = [0.2,0.8])[0]
+    return random.choices(choices, weights = [0.15,0.85])[0]

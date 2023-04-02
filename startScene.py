@@ -1,10 +1,15 @@
 import PyGine
 from gridManager import gridManager
-from HUD import HUD
+from info import info
+
 
 class startScene(PyGine.Scene) :
     def __init__(self) :
         super().__init__()
+
+    def start(self) :
+        self.addGameObject(info())
+
         
 
     def update(self, dt):
